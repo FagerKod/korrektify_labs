@@ -5,9 +5,9 @@
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: #000000;
+  --background-start-rgb: #d6dbdc;
+  --background-end-rgb: #ffffff;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -34,13 +34,20 @@
     #00000080
   );
 
+  --failing-contrast-heading: 179, 179, 179;
+  --failing-contrast-paragraph: 140, 140, 140;
+
   --callout-rgb: 238, 240, 241;
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+  --nav-bg-color: #004d99; /* Dark blue background */
+  --nav-text-color: #ffffff; /* White text */
+  --nav-hover-bg-color: #003366; /* Slightly darker blue on hover */
+  --nav-padding: 1rem; /* Padding inside the nav */
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -71,12 +78,16 @@
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
   }
-}
+} */
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+*:focus-visible {
+  outline: solid 2px black;
 }
 
 html,
@@ -98,10 +109,58 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+} */
+h1 {
+  font-size: 4rem;
+}
+
+img,
+section {
+  margin-bottom: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header p {
+  font-size: 1.5rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"] {
+  height: 50px;
+}
+
+button {
+  height: 50px;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 700px) {
+  img {
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-size: 2rem;
   }
 }

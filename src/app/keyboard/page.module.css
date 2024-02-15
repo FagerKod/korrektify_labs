@@ -1,0 +1,14 @@
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.input_container {
+  padding: 0.5rem 0;
+}
+
+.input_container .radio {
+  margin: 0 0.5rem;
+}

@@ -1,0 +1,31 @@
+.card1 h2 {
+  color: #000000;
+}
+
+.card1 p {
+  color: #000000;
+}
+
+.card2 h2 {
+  color: #333333;
+}
+
+.card2 p {
+  color: #060505;
+}
+
+.card3 h2 {
+  color: #555555;
+}
+
+.card3 p {
+  color: #767676;
+}
+
+.card4 h2 {
+  color: rgba(var(--failing-contrast-heading), 1);
+}
+
+.card4 p {
+  color: rgba(var(--failing-contrast-paragraph), 1);
+}

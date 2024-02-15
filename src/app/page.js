@@ -1,95 +1,61 @@
-import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
+    <>
+      <header>
+        <h1>The good, the bad and the a11y</h1>
+        <p>Low hanging fruit in web accessibility</p>
+      </header>
+      <section>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
+          src="/a11y_cowboys2.jpeg"
+          alt="Two male and one female cowboy walk away from a tree, in a gritty black and white style."
+          width={500}
+          height={500}
           priority
         />
-      </div>
+      </section>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <section>
+        <article className={styles.grid}>
+          <div className={styles.card}>
+            <Link href="/contrasts">
+              <h2>Contrasts</h2>
+            </Link>
+          </div>
+          <div className={styles.card}>
+            <Link href="/alttext">
+              <h2>Alternative text</h2>
+            </Link>
+          </div>
+          <div className={styles.card}>
+            <Link href="/linksbuttons">
+              <h2>Links and buttons</h2>
+            </Link>
+          </div>
+          <div className={styles.card}>
+            <Link href="/labels">
+              <h2>Form labels</h2>
+            </Link>
+          </div>
+        </article>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <article className={styles.grid}>
+          <div className={styles.card}>
+            <Link href="/keyboard">
+              <h2>Keyboard navigation</h2>
+            </Link>
+          </div>
+          <div className={styles.card}>
+            <Link href="/responsive">
+              <h2>Responsive design</h2>
+            </Link>
+          </div>
+        </article>
+      </section>
+    </>
   );
 }
